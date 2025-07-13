@@ -1,7 +1,8 @@
 # Ignore raw data and intermediate results
-data/raw/
-results/
-logs/
+# Note: Empty directories are kept for project structure
+data/raw/*
+results/*
+logs/*
 .Rhistory
 .RData
 .Rproj.user/
