@@ -1,0 +1,11 @@
+# Ignore raw data and intermediate results
+data/raw/
+results/
+logs/
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+.ipynb_checkpoints/
+*.log
+*.tmp
