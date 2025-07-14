@@ -89,24 +89,33 @@ Format: `YYYYMMDD_vX_function.sh`
 Example: `20250713_v1_fastqc.sh` - FastQC quality control script created on July 13, 2025
 
 #### Data Files
-Format: `sample_ID_stage_type.YYYYMMDD`
+Format: `[project]_[sampleID]_[stage]_[datatype].[ext]`
 
-- `sample_ID`: Unique sample identifier (e.g., sample_01)
-- `stage`: Data processing stage (raw, qc, aligned)
-- `type`: File type or analysis
-- `YYYYMMDD`: Date of data generation
+- `[project]`: Project name/identifier (e.g., cancer001)
+- `[sampleID]`: Sample identifier (e.g., Tumor, Normal)
+- `[stage]`: Data processing stage (raw, aligned, qc)
+- `[datatype]`: Type of data (reads, bam, report)
+- `[ext]`: File extension
 
-Example: `sample_01_aligned_bam.20250713` - Aligned BAM file for sample 01
+Examples:
+- `cancer001_Tumor_raw_reads.fastq` - Raw FASTQ reads for tumor sample
+- `cancer001_Tumor_aligned_bam.bam` - Aligned BAM file for tumor sample
+- `cancer001_Tumor_QC_report.html` - QC report for tumor sample
+- `cancer001_Normal_raw_reads.fastq` - Raw FASTQ reads for normal sample
 
-#### Results
-Format: `sample_ID_analysis_type.YYYYMMDD`
+### Results and Analysis Files
+Format: `[project]_[sampleID]_[analysis]_[type].[ext]`
 
-- `sample_ID`: Unique sample identifier
-- `analysis`: Type of analysis performed
-- `type`: Result file type
-- `YYYYMMDD`: Date of analysis
+- `[project]`: Project name/identifier
+- `[sampleID]`: Sample identifier
+- `[analysis]`: Type of analysis performed
+- `[type]`: Result file type
+- `[ext]`: File extension
 
-Example: `sample_01_variant_calling_vcf.20250713` - VCF file from variant calling
+Examples:
+- `cancer001_Tumor_variant_calling_vcf.vcf` - VCF file from variant calling
+- `cancer001_Tumor_alignment_metrics.txt` - Alignment metrics file
+- `cancer001_Tumor_variant_summary.html` - Variant summary report
 
 ### Sample Metadata
 Format: `sample_metadata.YYYYMMDD`
